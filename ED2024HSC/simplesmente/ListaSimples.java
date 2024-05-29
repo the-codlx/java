@@ -193,5 +193,4 @@ public class ListaSimples {
 		this.quantNos++;
 	}
 		
-		
 }

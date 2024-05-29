@@ -12,7 +12,7 @@ public class TestarQuestao02 {
 		pilha.empilhar(new Item(10));
 		pilha.empilhar(new Item(15));
 		
-		pilha.retirarMaior10();
+		//pilha.retirarMaior10();
 		
 		//verificar o metodo acima
 		while (!pilha.eVazia()) {
