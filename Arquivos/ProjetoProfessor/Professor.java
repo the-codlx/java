@@ -1,3 +1,4 @@
+package ProjetoProfessor;
 public class Professor {
 	private int matricula;
 	private String nome,endereco,setor,data;
