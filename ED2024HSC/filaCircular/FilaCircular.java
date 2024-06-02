@@ -8,7 +8,7 @@ public class FilaCircular {
 	private int tras;
 	private int tamanho;
 
-	public FilaCircular(int qte){//qte é o tamanho do vetor
+	public FilaCircular(int qte){//qte ï¿½ o tamanho do vetor
 		this.frente = 0;
 		this.tras = 0;
 		this.tamanho = 0;
@@ -53,7 +53,7 @@ public class FilaCircular {
 			return no;
 		}
 	}	
-	public String toString(){ //imprimir o conteúdo da fila
+	public String toString(){ //imprimir o conteï¿½do da fila
 		String msg="";
 		int aux= this.frente;
 		for (int i=1; i <= this.tamanho; i++){
@@ -72,5 +72,6 @@ public class FilaCircular {
 		}
 		return soma;
 	}
-	//enzo sampaio
+	//enzo sampaio 
+
 }

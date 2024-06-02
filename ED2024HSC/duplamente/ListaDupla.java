@@ -33,8 +33,8 @@ public class ListaDupla {
 	public boolean eVazia (){
 		return (this.prim == null);
 	}
-	//insere um novo nó no final da lista ou se a lista estiver vazia, insere
-    // o primeiro nó na lista
+	//insere um novo nï¿½ no final da lista ou se a lista estiver vazia, insere
+    // o primeiro nï¿½ na lista
 	public void inserirUltimo (Item elem){
 		NoDupla novoNo = new NoDupla (elem);
 		if (this.eVazia())
@@ -46,7 +46,7 @@ public class ListaDupla {
 		this.ult = novoNo;
 		this.quantNos++;
 	}
-	//retorna o endereço do nó que está contendo o valor a ser procurado.
+	//retorna o endereï¿½o do nï¿½ que estï¿½ contendo o valor a ser procurado.
 	public NoDupla pesquisarNo (int chave){
 		NoDupla atual = this.prim;
 		while ((atual != null) && (atual.getInfo().getChave() != chave))
@@ -59,7 +59,7 @@ public class ListaDupla {
 
 
 
-	//remove um determinado nó em qualquer posição na lista.
+	//remove um determinado nï¿½ em qualquer posiï¿½ï¿½o na lista.
 	public boolean removerNo (int chave){
 		NoDupla atual = this.prim;
 		while ((atual != null) && (atual.getInfo().getChave()!= chave)){
@@ -70,7 +70,7 @@ public class ListaDupla {
 		else 
 			if (atual == this.prim){
 				this.prim = prim.getProx();
-				if (this.prim == null) //se a lista tem somente um nó
+				if (this.prim == null) //se a lista tem somente um nï¿½
 					this.ult=null;
 				else 
 					this.prim.setAnt(null);
@@ -96,7 +96,7 @@ public class ListaDupla {
 		}
 		return msg;
 	}
-	//atividade 04 - questão 06
+	//atividade 04 - questï¿½o 06
 	public void concatenarListas(ListaDupla lista2) {
 		lista2.prim.setAnt(this.ult);
 		this.ult.setProx(lista2.prim);
@@ -106,7 +106,7 @@ public class ListaDupla {
 		this.quantNos += lista2.quantNos;
 		lista2.quantNos = 0;
 	}
-	//atividade 04 - questão 07
+	//atividade 04 - questï¿½o 07
 	public ListaDupla partirLista() {
 		ListaDupla lista2 = new ListaDupla();
 		
@@ -126,7 +126,7 @@ public class ListaDupla {
 		return lista2;
 	}
 	
-	//atividade 04 - questão 10
+	//atividade 04 - questï¿½o 10
 	public boolean removerZeros() {
 		if (this.eVazia()) {
 			return false;
@@ -161,12 +161,30 @@ public class ListaDupla {
 		}
 		
 		
-		
-		
 	}
 	
 	
-	
+	public boolean pesquisaRec(int chave, NoDupla atual){
+
+		if(atual == null){
+
+			return false;
+
+		}
+
+		if(atual.getInfo().getChave() == chave){
+
+			return true;
+
+		}	
+
+		else{
+
+			return pesquisaRec(chave, atual.getProx());
+
+		}
+		
+	}
 	
 	
 	
